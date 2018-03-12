@@ -11,6 +11,10 @@ const TodoList = (props) => {
                         <li key={item.id} onClick={() => {props.updateTodo(item)}}>
                             <input type="checkbox" checked={item.status} /> 
                             <span className={ item.status ? "completed" : ""} > {item.text} </span>
+                            <a href="#" class="btn btn-primary a-btn-slide-text deleteItem">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                <span><strong>Delete</strong></span>            
+                            </a>
                         </li>
                     );
                 })

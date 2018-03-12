@@ -47,7 +47,9 @@ ul.ListItem li span {
 li .completed {
     text-decoration: line-through;
 }
-
+ul.ListItem li .deleteItem {
+    float: right;
+}
 .filters span {
     padding: 0 20px;
     cursor: pointer;
