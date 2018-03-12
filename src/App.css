@@ -1,0 +1,54 @@
+body{
+    padding: 50px;
+    margin:0px;
+    background: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ToDoAppContainer {
+    width: 600px;
+    margin: 0px auto;
+    padding: 0px 30px 30px;
+    background: #fff;
+    border:solid 1px #ccc;
+    border-top: solid 6px #ccc;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.15);
+}
+
+.addTodoText {
+    width: 90%;
+    padding: 6px;
+    height: 30px;
+    font-size: 20px;
+    border-radius:6px;
+    border:solid 1px #ccc;
+}
+ul.ListItem {
+    margin: 20px;
+    padding:0px;
+    list-style: none;
+}
+ul.ListItem li {
+    list-style: none;
+    list-style-type: none;
+    padding: 8px;
+    font-size: 16px;
+    border-bottom:solid 1px #ccc;
+    display: block;
+    cursor: pointer;
+}
+
+ul.ListItem li span {
+    cursor: pointer;
+    display: inline-block;
+}
+
+li .completed {
+    text-decoration: line-through;
+}
+
+.filters span {
+    padding: 0 20px;
+    cursor: pointer;
+}
