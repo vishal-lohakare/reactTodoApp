@@ -57,6 +57,17 @@ class Todo extends Component {
 
         this.updateFilteredList(updatedTodoList);
     }
+    deleteTodo(deletedTodoItem) {
+        var updatedTodoList = this.state.todoList.map(todoItem => {
+            if(todoItem.id === deletedTodoItem.id) {
+                console.log('todoItem.id',todoItem.id);
+                this.state.todoList.splice(todoItem.id);
+                console.log(this.state.todoList);
+            }
+        });
+        
+        this.updateFilteredList(this.state.todoList);
+    }
 
     updateFilter(filter) {
 
@@ -77,7 +88,7 @@ class Todo extends Component {
             <div className="ToDoAppContainer">
                 <h1>To Do App</h1>
                 <TodoCreate addTodo={this.addTodo.bind(this)} />
-                <TodoList todoList={this.state.filteredList} updateTodo={this.updateTodo.bind(this)} />
+                <TodoList todoList={this.state.filteredList} deleteTodo={this.deleteTodo.bind(this)} updateTodo={this.updateTodo.bind(this)} />
                 <TodoFilter todoList={this.state.filteredList} updateFilter={this.updateFilter.bind(this)}/>
             </div>
         );
